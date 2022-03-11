@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Formulário de Cinéfilo</title>
+</head>
+<body>
+	<form th:object="${cinefilo}" th:action="@{/dados}">
+	Nome: <input type="text" th:field=*{nome}> <br>
+	
+	Sexo: <br>
+	 M:<input type="radio"  th:field=*{sexo} value="M"> 
+	F:<input type="radio"  th:field=*{sexo} value="F"> <br>
+	
+	Telefone: <input type="text" th:field=*{telefone}> <br>
+	
+	Generos preferidos: <br>
+	
+	Aventura: <input type="checkbox"  th:field=*{generosPreferidos} value="Aventura"> <br>	
+	Policial: <input type="checkbox"  th:field=*{generosPreferidos} value="Policial"> <br>
+	Comédia: <input type="checkbox"  th:field=*{generosPreferidos} value="Comédia"> <br>
+	Drama: <input type="checkbox"  th:field=*{generosPreferidos} value="Drama"> <br>
+	Romance: <input type="checkbox"  th:field=*{generosPreferidos} value="Romance"> <br>
+	Suspense: <input type="checkbox"  th:field=*{generosPreferidos} value="Suspense"> <br>
+	Terror: <input type="checkbox"  th:field=*{generosPreferidos} value="Terror"> <br>		
+	Ficção: <input type="checkbox"  th:field=*{generosPreferidos} value="Ficção"> <br>	
+	
+	
+	Gênero preferido: 
+	<select th:field=*{generoPreferido}>>
+		<option value="Aventura">Aventura</option>
+		<option value="Policial">Policial</option>
+		<option value="Comédia">Comédia</option>
+		<option value="Drama">Drama</option>
+	</select>
+	
+		<br>
+		<br>
+		
+	Biografia: <textarea type="text" th:field=*{biografia}></textarea>  <br> <br>
+	
+	<input type="submit" value="Exibir Dados"> 
+	</form>
+</body>
+</html>
